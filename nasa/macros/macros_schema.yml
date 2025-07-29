@@ -1,0 +1,36 @@
+version: 2
+
+macros:
+  - name: date_info
+    description: >
+      Generates multiple derived date and time columns from a single input date. Useful for enriching event data with temporal attributes.
+    arguments:
+      - name: input_date
+        description: The column or expression representing the date to be parsed.
+
+  - name: generate_schema_name
+    description: >
+      Overrides the default dbt behavior for generating schema names. Returns the custom schema name if provided, otherwise defaults to `target.schema`.
+    arguments:
+      - name: custom_schema_name
+        description: Custom schema name to use, can be `null`.
+      - name: node
+        description: dbt model node (required internally by dbt for context).
+
+  - name: status_counters_by_partition
+    description: >
+      Creates a set of windowed counters for predefined status values over specified partition columns.
+      This macro helps analyze the distribution of statuses within partitions (e.g., by mission or device).
+    arguments:
+      - name: status_column
+        description: The column name that contains status values (e.g., 'status').
+      - name: partition_by_columns
+        description: A list of column names to partition by in the window function.
+
+  - name: get_view_by_language
+    description: >
+      Macro that generates views by language to avoid repeating the same query
+      every time that a new language is added.
+    arguments:
+      - name: language
+        description: Language code that corresponds to a column in the seed file seeds/translate.csv.

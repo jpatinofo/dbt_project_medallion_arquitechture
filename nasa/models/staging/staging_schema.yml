@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: stg_events
+    description: >
+      Staging model for events. This table contains enriched and formatted metadata 
+      for each event, including temporal breakdown, mission context, device information, 
+      and operational status.
+    columns:
+      - name: event_id
+        description: "Unique identifier for each event."
+      - name: event_year
+        description: "Year in which the event occurred."
+      - name: event_month
+        description: "Month of the event."
+      - name: event_day
+        description: "Day of the month on which the event occurred."
+      - name: event_hour
+        description: "Hour of the day (0-23) when the event occurred."
+      - name: event_minute
+        description: "Minute in which the event was recorded."
+      - name: event_second
+        description: "Second in which the event was recorded."
+      - name: week_day
+        description: "Numeric representation of the day of the week (1 = Sunday, 7 = Saturday)."
+      - name: year_day
+        description: "Day of the year (1-366) on which the event occurred."
+      - name: decade_event
+        description: "Decade in which the event occurred (e.g., 202 for the 2020s)."
+      - name: era_event
+        description: "Era or epoch classification of the event (e.g., 1 for Common Era)."
+      - name: quarter_event
+        description: "Calendar quarter in which the event occurred (1-4)."
+      - name: year_week
+        description: "ISO week number of the year (1-53)."
+      - name: day_name
+        description: "Name of the weekday in uppercase letters (e.g., MONDAY)."
+      - name: month_name
+        description: "Name of the month in uppercase letters (e.g., JANUARY)."
+      - name: time_indicator
+        description: "AM/PM indicator based on the event timestamp."
+      - name: format_event_date
+        description: "Formatted version of the event timestamp as string (dd/mm/yyyy hh:mm:ss)."
+      - name: real_event_date
+        description: "Actual event timestamp with full datetime precision."
+      - name: mission
+        description: "Name or code of the mission related to the event."
+      - name: device
+        description: "Type of device associated with the event."
+      - name: status
+        description: "Operational status of the device at the time of the event (e.g., EXCELLENT, FAULTY, UNKNOWN)."

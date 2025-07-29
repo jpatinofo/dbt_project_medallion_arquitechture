@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: int_french
+    description: >
+      View that summarizes the total events for each day of the year, translating the day of the week into French.
+    columns:
+      - name: event_year
+        description: "Year of the event."
+      - name: translated_day
+        description: "Day of the week (translated to French)."
+      - name: total_events
+        description: "Total number of events for the given year and day."
+  - name: int_german
+    description: >
+      View that summarizes the total events for each day of the year, translating the day of the week into German.
+    columns:
+      - name: event_year
+        description: "Year of the event."
+      - name: translated_day
+        description: "Day of the week (translated to German)."
+      - name: total_events
+        description: "Total number of events for the given year and day."
+  - name: int_mandarin
+    description: >
+      View that summarizes the total events for each day of the year, translating the day of the week into Mandarin.
+    columns:
+      - name: event_year
+        description: "Year of the event."
+      - name: translated_day
+        description: "Day of the week (translated to Mandarin)."
+      - name: total_events
+        description: "Total number of events for the given year and day."
+  - name: int_spanish
+    description: >
+      View that summarizes the total events for each day of the year, translating the day of the week into Spanish.
+    columns:
+      - name: event_year
+        description: "Year of the event."
+      - name: translated_day
+        description: "Day of the week (translated to Spanish)."
+      - name: total_events
+        description: "Total number of events for the given year and day."

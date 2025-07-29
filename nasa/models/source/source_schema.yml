@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: src_events
+    schema: bronze
+    description: >
+      Staging model for events, containing raw records from data lake.
+      Includes metadata such as mission identifier, device status, and hash for data integrity.
+    columns:
+      - name: event_id
+        description: "Unique identifier for each event record."
+      - name: date
+        description: "Date when the event occurred."
+      - name: mission
+        description: "Code or name of the mission related to the event."
+      - name: device_type
+        description: "Type or category of the device involved in the event."
+      - name: device_status
+        description: "{{ doc('device_status') }}"
+      - name: hash
+        description: "Hash value used for verifying data integrity or deduplication."

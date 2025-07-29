@@ -1,0 +1,9 @@
+nasa: # nombre del perfil (debe coincidir con el especificado en dbt_project.yml)
+  target: dev # entorno activo por defecto (puede ser 'dev', 'prod', etc.)
+  outputs: # define las salidas o configuraciones de conexión
+    dev: # nombre del entorno de salida (debe coincidir con 'target')
+      type: duckdb # tipo de conector: en este caso, DuckDB
+      path: '/home/esteban/UNAL/BigData/asignaciones/dbt/database/unal.db'  # ruta al archivo .duckdb (puede ser relativa o absoluta)
+      extensions: # lista de extensiones que se cargarán al iniciar la conexión
+        - httpfs           # Permite leer archivos desde URLs remotas (como HTTP/S)
+        - parquet          # Permite leer y escribir archivos Parquet directamente desde dbt

@@ -1,0 +1,6 @@
+.vscode/
+./devices/
+stats/
+backup/
+./*.log
+unal.db

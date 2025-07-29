@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: dlake
+    description: this is the duckdb source related to events
+    schema: bronze
+    tables:
+      - name: events
+        description: NASA events related to different devices
+        columns:
+          - name: device_status
+            description: Status of the device at the time of the event
+            tests:
+              - dbt_expectations.expect_column_to_exist
+              - accepted_values:
+                  values: ['faulty', 'killed', 'unknown', 'warning', 'good', 'excellent']

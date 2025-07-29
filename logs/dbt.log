@@ -1,0 +1,85 @@
+[0m14:13:00.578442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31eaccd2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31ea005410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31ea007610>]}
+
+
+============================== 14:13:00.581585 | 4e7ee84a-cdb9-4dff-8494-e9c861813e44 ==============================
+[0m14:13:00.581585 [info ] [MainThread]: Running with dbt=1.9.8
+[0m14:13:00.582187 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/home/esteban/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt init nasa', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:13:00.596152 [debug] [MainThread]: Starter project path: /home/esteban/Apps/anaconda3/envs/py311_spark/lib/python3.11/site-packages/dbt/include/starter_project
+[0m14:13:00.600902 [info ] [MainThread]: 
+Your new dbt project "nasa" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:13:00.601910 [info ] [MainThread]: Setting up your profile.
+[0m14:14:14.846352 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 74.32919, "process_in_blocks": "80736", "process_kernel_time": 0.192783, "process_mem_max_rss": "110920", "process_out_blocks": "72", "process_user_time": 1.485742}
+[0m14:14:14.847426 [debug] [MainThread]: Command `dbt init` succeeded at 14:14:14.847169 after 74.33 seconds
+[0m14:14:14.848221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31ea0ee2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31ee177710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31ee2b5e10>]}
+[0m14:14:14.848938 [debug] [MainThread]: Flushing usage events
+[0m14:14:16.098786 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:33:24.532808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7990c12af690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7990c13063d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7990c1304fd0>]}
+
+
+============================== 20:33:24.541110 | 255df099-8d16-482d-9d09-f690c3debfa2 ==============================
+[0m20:33:24.541110 [info ] [MainThread]: Running with dbt=1.9.8
+[0m20:33:24.541771 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/esteban/UNAL/BigData/asignaciones/dbt/nasa/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:33:24.546070 [info ] [MainThread]: dbt version: 1.9.8
+[0m20:33:24.546342 [info ] [MainThread]: python version: 3.11.10
+[0m20:33:24.546588 [info ] [MainThread]: python path: /home/esteban/Apps/anaconda3/envs/py311_spark/bin/python3.11
+[0m20:33:24.546912 [info ] [MainThread]: os info: Linux-6.14.0-24-generic-x86_64-with-glibc2.39
+[0m20:33:24.627372 [info ] [MainThread]: Using profiles dir at /home/esteban/UNAL/BigData/asignaciones/dbt/nasa/.dbt
+[0m20:33:24.627861 [info ] [MainThread]: Using profiles.yml file at /home/esteban/UNAL/BigData/asignaciones/dbt/nasa/.dbt/profiles.yml
+[0m20:33:24.628188 [info ] [MainThread]: Using dbt_project.yml file at /home/esteban/UNAL/BigData/asignaciones/dbt/dbt_project.yml
+[0m20:33:24.630110 [info ] [MainThread]: adapter type: duckdb
+[0m20:33:24.630517 [info ] [MainThread]: adapter version: 1.9.3
+[0m20:33:24.630864 [info ] [MainThread]: Configuration:
+[0m20:33:24.631173 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:33:24.631455 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:33:24.631724 [info ] [MainThread]: Required dependencies:
+[0m20:33:24.632024 [debug] [MainThread]: Executing "git --help"
+[0m20:33:24.633687 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:33:24.634207 [debug] [MainThread]: STDERR: "b''"
+[0m20:33:24.634554 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:33:24.635003 [info ] [MainThread]: Connection:
+[0m20:33:24.635534 [info ] [MainThread]:   database: unal
+[0m20:33:24.635986 [info ] [MainThread]:   schema: main
+[0m20:33:24.636444 [info ] [MainThread]:   path: /home/esteban/UNAL/BigData/asignaciones/dbt/database/unal.db
+[0m20:33:24.636879 [info ] [MainThread]:   config_options: None
+[0m20:33:24.637324 [info ] [MainThread]:   extensions: ['httpfs', 'parquet']
+[0m20:33:24.637776 [info ] [MainThread]:   settings: {}
+[0m20:33:24.638234 [info ] [MainThread]:   external_root: .
+[0m20:33:24.638798 [info ] [MainThread]:   use_credential_provider: None
+[0m20:33:24.639259 [info ] [MainThread]:   attach: None
+[0m20:33:24.639786 [info ] [MainThread]:   filesystems: None
+[0m20:33:24.640233 [info ] [MainThread]:   remote: None
+[0m20:33:24.640717 [info ] [MainThread]:   plugins: None
+[0m20:33:24.641132 [info ] [MainThread]:   disable_transactions: False
+[0m20:33:24.641707 [info ] [MainThread]: Registered adapter: duckdb=1.9.3
+[0m20:33:24.697302 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m20:33:24.710730 [debug] [MainThread]: Using duckdb connection "debug"
+[0m20:33:24.711057 [debug] [MainThread]: On debug: select 1 as id
+[0m20:33:24.711297 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:33:24.776301 [debug] [MainThread]: SQL status: OK in 0.065 seconds
+[0m20:33:24.777157 [debug] [MainThread]: On debug: Close
+[0m20:33:24.777529 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:33:24.777848 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:33:24.778097 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/esteban/UNAL/BigData/asignaciones/dbt/dbt_project.yml> not found
+
+[0m20:33:24.778698 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.28058532, "process_in_blocks": "8", "process_kernel_time": 0.118718, "process_mem_max_rss": "143360", "process_out_blocks": "24", "process_user_time": 1.363766}
+[0m20:33:24.779098 [debug] [MainThread]: Command `dbt debug` failed at 20:33:24.779017 after 0.28 seconds
+[0m20:33:24.779403 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:33:24.779709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7990c547b890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7990c1305050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7990c11ee7d0>]}
+[0m20:33:24.780060 [debug] [MainThread]: Flushing usage events

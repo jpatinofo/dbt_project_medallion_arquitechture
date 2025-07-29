@@ -1,0 +1,161 @@
+version: 2
+
+models:
+  - name: fct_day_events
+    description: >
+      Fact table that summarizes the number of unknown status events
+      per mission and device. Used to monitor device connectivity or data quality issues.
+    columns:
+      - name: mission
+        description: "Name or identifier of the mission associated with the event data."
+      - name: device
+        description: "Type of device for which the unknown events were recorded."
+      - name: number_unknown
+        description: "Total number of events with 'UNKNOWN' status for the given mission and device."
+  - name: fct_disconnections
+    description: >
+      Fact table that tracks the number of disconnection events, identified by
+      the 'UNKNOWN' status, for each mission and device. Useful for evaluating
+      system reliability and detecting communication failures.
+    columns:
+      - name: mission
+        description: "Identifier or name of the mission associated with the disconnected device."
+      - name: device
+        description: "Type or category of the device that experienced disconnections."
+      - name: number_unknown
+        description: "Count of events where the device reported an 'UNKNOWN' status, indicating a disconnection or undefined state."
+
+  - name: fct_event_days
+    description: >
+      Fact table that aggregates the total number of events per day of the week and year.
+      Useful for identifying patterns and trends in event frequency based on the day.
+    columns:
+      - name: event_year
+        description: "Year in which the events occurred."
+      - name: day_name
+        description: "Name of the day of the week (e.g., MONDAY, TUESDAY)."
+      - name: total_events
+        description: "Total number of events recorded on that day of the week within the year."
+
+  - name: fct_events
+    description: >
+      Fact table that summarizes the number of events by mission, device type,
+      and operational status. Useful for analyzing event volume and device performance.
+    columns:
+      - name: mission
+        description: "Identifier or name of the mission associated with the event."
+      - name: device
+        description: "Type or category of the device involved in the event."
+      - name: status
+        description: "Operational status reported for the device during the event (e.g., EXCELLENT, FAULTY, UNKNOWN)."
+      - name: number_events
+        description: "Total number of events for the given combination of mission, device, and status."
+
+  - name: fct_mission_analysis
+    description: >
+      Fact table that provides a daily operational breakdown of mission performance.
+      It includes the count of events by status category and the total number of events
+      per mission and date. This model helps identify operational trends, anomalies, and reliability patterns.
+    columns:
+      - name: format_event_date
+        description: "Formatted string representing the date and time of the event (dd/mm/yyyy hh:mm:ss)."
+      - name: mission
+        description: "Identifier or name of the mission involved in the event."
+      - name: status
+        description: "Reported status of the device at the time of the event."
+      - name: total_faulty
+        description: "Number of events with a 'FAULTY' status for the given mission and day."
+      - name: total_killed
+        description: "Number of events where the device was reported as 'KILLED'."
+      - name: total_unknown
+        description: "Number of events with 'UNKNOWN' status, indicating possible disconnection or undefined state."
+      - name: total_warning
+        description: "Number of events flagged as 'WARNING' for the mission and date."
+      - name: total_excellent
+        description: "Number of events with an 'EXCELLENT' status indicating normal operation."
+      - name: total_events_mission
+        description: "Total number of events recorded for the mission on the specified day."
+
+  - name: fct_missions
+    description: >
+      Fact table that summarizes the number of inoperable devices per mission.
+      Inoperable devices include those with statuses such as 'FAULTY', 'KILLED', or 'UNKNOWN'.
+      This model supports reliability and operational health analysis across missions.
+    columns:
+      - name: mission
+        description: "Name or code of the mission associated with the devices."
+      - name: inoperable_devices
+        description: "Total count of devices with inoperable status (FAULTY, KILLED, UNKNOWN) for the mission."
+
+  - name: fct_operational_duration
+    description: >
+      Fact table that summarizes the operational duration of each mission.
+      It includes the first and last event timestamps, number of active days,
+      total events, and average events per day. Useful for evaluating mission activity and consistency over time.
+    columns:
+      - name: mission
+        description: "Name or identifier of the mission."
+      - name: first_event
+        description: "Timestamp of the first recorded event for the mission."
+      - name: last_event
+        description: "Timestamp of the last recorded event for the mission."
+      - name: active_days
+        description: "Number of days between the first and last event (inclusive)."
+      - name: total_events
+        description: "Total number of events recorded for the mission."
+      - name: avg_events_per_day
+        description: "Average number of events per active day for the mission."
+
+  - name: fct_percentages
+    description: >
+      Fact table that calculates the percentage of events by mission and device
+      in relation to the total number of events. Useful for understanding the distribution
+      of activity across missions and device types.
+    columns:
+      - name: mission
+        description: "Name or identifier of the mission."
+      - name: device
+        description: "Type or category of the device."
+      - name: percentage
+        description: "Percentage of total events represented by the given mission and device combination."
+
+  - name: fct_ranks
+    description: >
+      Fact table that ranks missions and devices based on the total number of events.
+      Useful for identifying the most active mission-device combinations and establishing operational priorities.
+    columns:
+      - name: mission
+        description: "Name or identifier of the mission."
+      - name: device
+        description: "Type or category of the device."
+      - name: total
+        description: "Total number of events for the mission and device combination."
+      - name: rank
+        description: "Dense rank of the mission-device combination based on total events, ordered descending."
+
+  - name: fct_simultaneous_events
+    description: >
+      Fact table that identifies simultaneous events within missions,
+      based on the hour, minute, and second of occurrence.
+      Useful for detecting peaks in activity or potential data collisions.
+    columns:
+      - name: mission
+        description: "Name or identifier of the mission."
+      - name: event_hour
+        description: "Hour (0-23) when the event occurred."
+      - name: event_minute
+        description: "Minute (0-59) when the event occurred."
+      - name: event_second
+        description: "Second (0-59) when the event occurred."
+      - name: simultaneous_events
+        description: "Number of events that occurred at the exact same timestamp within the same mission."
+
+  - name: fct_week_tendencies
+    description: >
+      Fact table that aggregates the total number of events per week of the year.
+      Useful for analyzing weekly trends, identifying seasonal patterns, and monitoring operational activity over time.
+    columns:
+      - name: year_week
+        description: "ISO week number of the year (1-53) in which the events occurred."
+      - name: total_events
+        description: "Total number of events recorded during the specified week."
