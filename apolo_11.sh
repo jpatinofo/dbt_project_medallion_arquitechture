@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 echo "-------- Starting Apolo 11 script... --------"
+
 ABS_PATH=$(pwd)
 CONFIG_SH=${ABS_PATH}/scripts/config.sh
 CONFIG_FILE=${ABS_PATH}/variables.config
@@ -23,15 +24,22 @@ source ${ABS_PATH}/scripts/create_logs.sh ${TIMESTAMP}
 
 source ${ABS_PATH}/scripts/get_stats.sh ${TIMESTAMP}
 
+
 # Ejecutar el script Python que carga los datos
 python3 app.py $CONSOLIDATED_FILE_PATH "," $DB "bronze.events"
 
+cd ${ABS_PATH}/nasa
+
 # Ejecutar dbt
 dbt deps
+dbt test
 dbt seed
 dbt run
 dbt docs generate
 
+cd ${ABS_PATH}
+
 rm -rf variables.config
+
 
 echo "-------- Apolo 11 script completed successfully. --------"

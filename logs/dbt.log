@@ -83,3 +83,83 @@ Happy modeling!
 [0m20:33:24.779403 [debug] [MainThread]: Connection 'debug' was properly closed.
 [0m20:33:24.779709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7990c547b890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7990c1305050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7990c11ee7d0>]}
 [0m20:33:24.780060 [debug] [MainThread]: Flushing usage events
+[0m18:22:44.043696 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d55a02fe790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d55a02fe710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d55a02fdad0>]}
+
+
+============================== 18:22:44.047566 | 5c2a114a-256f-4822-9995-a5b7cffaab04 ==============================
+[0m18:22:44.047566 [info ] [MainThread]: Running with dbt=1.9.8
+[0m18:22:44.048326 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/esteban/UNAL/BigData/asignaciones/dbt/nasa/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt deps', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:22:44.049021 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/esteban/UNAL/BigData/asignaciones/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:22:44.049990 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.047508076, "process_in_blocks": "8", "process_kernel_time": 0.081981, "process_mem_max_rss": "97080", "process_out_blocks": "8", "process_user_time": 1.000772}
+[0m18:22:44.050500 [debug] [MainThread]: Command `dbt deps` failed at 18:22:44.050390 after 0.05 seconds
+[0m18:22:44.050889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d55a02feb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d55a447b7d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d55a02a3a50>]}
+[0m18:22:44.051282 [debug] [MainThread]: Flushing usage events
+[0m18:22:45.301802 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:22:46.505840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78312eb84190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78312edd17d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78312ebe5710>]}
+
+
+============================== 18:22:46.507926 | 87ec3454-3035-4a45-8a4c-ff2a891c960f ==============================
+[0m18:22:46.507926 [info ] [MainThread]: Running with dbt=1.9.8
+[0m18:22:46.508334 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/esteban/UNAL/BigData/asignaciones/dbt/nasa/.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt seed', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m18:22:46.508718 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/esteban/UNAL/BigData/asignaciones/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:22:46.509395 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 0.040767398, "process_in_blocks": "0", "process_kernel_time": 0.096533, "process_mem_max_rss": "97260", "process_out_blocks": "0", "process_user_time": 0.949407}
+[0m18:22:46.509819 [debug] [MainThread]: Command `dbt seed` failed at 18:22:46.509734 after 0.04 seconds
+[0m18:22:46.510151 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78312eb84250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x783132d77690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78312ebf3d50>]}
+[0m18:22:46.510490 [debug] [MainThread]: Flushing usage events
+[0m18:22:46.917446 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:22:48.156923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6da70de10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6da9ee710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6da6b9a90>]}
+
+
+============================== 18:22:48.159044 | 46328e61-20ea-4592-ae8e-8a6bd721d25e ==============================
+[0m18:22:48.159044 [info ] [MainThread]: Running with dbt=1.9.8
+[0m18:22:48.159510 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/esteban/UNAL/BigData/asignaciones/dbt/nasa/.dbt', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt test', 'send_anonymous_usage_stats': 'True'}
+[0m18:22:48.159943 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/esteban/UNAL/BigData/asignaciones/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:22:48.160676 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 0.04416868, "process_in_blocks": "0", "process_kernel_time": 0.091823, "process_mem_max_rss": "97040", "process_out_blocks": "8", "process_user_time": 0.985103}
+[0m18:22:48.161115 [debug] [MainThread]: Command `dbt test` failed at 18:22:48.161018 after 0.04 seconds
+[0m18:22:48.161443 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6de87b7d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6da70ee90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6da6b8310>]}
+[0m18:22:48.161794 [debug] [MainThread]: Flushing usage events
+[0m18:22:48.564492 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:22:49.782216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7deeb3aac510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7deeb3ae8310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7deeb3ae8550>]}
+
+
+============================== 18:22:49.784424 | f1a497fd-3601-4d44-8523-47c431eef44d ==============================
+[0m18:22:49.784424 [info ] [MainThread]: Running with dbt=1.9.8
+[0m18:22:49.784966 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/esteban/UNAL/BigData/asignaciones/dbt/nasa/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m18:22:49.785389 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/esteban/UNAL/BigData/asignaciones/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:22:49.786100 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.043688554, "process_in_blocks": "0", "process_kernel_time": 0.106576, "process_mem_max_rss": "97500", "process_out_blocks": "0", "process_user_time": 0.955205}
+[0m18:22:49.786493 [debug] [MainThread]: Command `dbt run` failed at 18:22:49.786416 after 0.04 seconds
+[0m18:22:49.786823 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7deeb3b15c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7deeb7c7b810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7deeb3b0b6d0>]}
+[0m18:22:49.787168 [debug] [MainThread]: Flushing usage events
+[0m18:22:50.166413 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:22:51.391963 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fba18ca5750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fba18d07d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fba1b227f90>]}
+
+
+============================== 18:22:51.394052 | 2da5e48a-d3d5-4e91-a2ed-7f754a7dae4e ==============================
+[0m18:22:51.394052 [info ] [MainThread]: Running with dbt=1.9.8
+[0m18:22:51.394589 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/esteban/UNAL/BigData/asignaciones/dbt/nasa/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt docs generate', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m18:22:51.395019 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/esteban/UNAL/BigData/asignaciones/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:22:51.395690 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": false, "command_wall_clock_time": 0.04346254, "process_in_blocks": "0", "process_kernel_time": 0.090855, "process_mem_max_rss": "96940", "process_out_blocks": "0", "process_user_time": 0.969461}
+[0m18:22:51.396129 [debug] [MainThread]: Command `dbt docs generate` failed at 18:22:51.396047 after 0.04 seconds
+[0m18:22:51.396460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fba18d07d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fba18d07ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fba18ca3cd0>]}
+[0m18:22:51.396862 [debug] [MainThread]: Flushing usage events
+[0m18:22:51.757086 [debug] [MainThread]: An error was encountered while trying to flush usage events
